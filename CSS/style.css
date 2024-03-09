@@ -294,7 +294,7 @@ body {
   transition: 0.5s;
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  height: 1000%;
   display: flex;
   flex-direction: column;
   align-items: center;
