@@ -23,27 +23,29 @@ const observer = new IntersectionObserver((entries) =>{
    entries.forEach((entry) =>{
       if (entry.isIntersecting){
          entry.target.classList.add('active')
+         observer.unobserve(entry.target)
+      }
+      if(!entry.isIntersecting){
+         const entryHeight = entry.target.offsetHeight;
+         const entryOffset = entry.target.offsetTop;
+         const entryStart = 4;
+         
+         let entryItem = window.innerHeight - entryHeight / entryStart;
+         if (entryItem > window.innerHeight){
+            entryItem = window.innerHeight - window.innerHeight / entryStart;
+         }
+
+         if ((scrollY > entryOffset - entryItem) && scrollY < (entryOffset + entryHeight) ){
+            entry.target.classList.add('active')
+            observer.unobserve(entry.target)
+         }
       }
    })
-},{
-   threshold: 0.2,
+},
+{
+   threshold: 0.25,
 });
 
-document.querySelectorAll('.btn').forEach((btn) => {
+document.querySelectorAll('.btn, .title, .text, .why__list, .header, .content-what__items, .blog__items, .content__image').forEach((btn) => {
    observer.observe(btn)
-})
-document.querySelectorAll('.title').forEach((title) => {
-   observer.observe(title)
-})
-document.querySelectorAll('.text').forEach((text) => {
-   observer.observe(text)
-})
-document.querySelectorAll('.why__point').forEach((point) => {
-   observer.observe(point)
-})
-document.querySelectorAll('.header').forEach((point) => {
-   observer.observe(point)
-})
-document.querySelectorAll('.content-what__item').forEach((what) => {
-   observer.observe(what)
 })
