@@ -688,6 +688,31 @@ body {
   gap: 25px;
   justify-content: center;
 }
+.why__list.active .why__point:nth-child(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.why__list.active .why__point:nth-child(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease 0.2s;
+}
+.why__list.active .why__point:nth-child(3) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease 0.4s;
+}
+.why__list.active .why__point:nth-child(4) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease 0.6s;
+}
+.why__list.active .why__point:nth-child(5) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease 0.8s;
+}
 .why__point {
   color: rgb(156, 156, 156);
   line-height: 24px;
@@ -705,31 +730,6 @@ body {
   left: -42px;
   top: -5px;
   background: url(../IMG/Why/decor.svg) 0 0 no-repeat;
-}
-.why__point.active:nth-child(1) {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.3s ease 0s;
-}
-.why__point.active:nth-child(2) {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.3s ease 0.2s;
-}
-.why__point.active:nth-child(3) {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.3s ease 0.4s;
-}
-.why__point.active:nth-child(4) {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.3s ease 0.6s;
-}
-.why__point.active:nth-child(5) {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.3s ease 0.8s;
 }
 
 .static__container {
@@ -837,6 +837,30 @@ body {
     flex-wrap: wrap;
   }
 }
+.content-what__items.active .content-what__item {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.content-what__items.active .content-what__item:nth-child(1) {
+  transition: all 0.3s ease 0.3s;
+}
+.content-what__items.active .content-what__item:nth-child(2) {
+  transition: all 0.3s ease 0.6s;
+}
+.content-what__items.active .content-what__item:nth-child(3) {
+  transition: all 0.3s ease 0.9s;
+}
+@media (max-width: 1024.98px) {
+  .content-what__items.active .content-what__item:nth-child(1) {
+    transition: all 0.3s ease 0s;
+  }
+  .content-what__items.active .content-what__item:nth-child(2) {
+    transition: all 0.3s ease 0.4s;
+  }
+  .content-what__items.active .content-what__item:nth-child(3) {
+    transition: all 0.3s ease 0.8s;
+  }
+}
 .content-what__item {
   display: flex;
   flex-direction: column;
@@ -846,19 +870,17 @@ body {
   max-width: 395px;
   min-width: 290px;
 }
-@media (min-width: 1400.98px) {
-  .content-what__item:nth-child(1) {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  .content-what__item:nth-child(2) {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  .content-what__item:nth-child(3) {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
+.content-what__item:nth-child(1) {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+.content-what__item:nth-child(2) {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+.content-what__item:nth-child(3) {
+  transform: translateX(-200%);
+  opacity: 0;
 }
 @media (max-width: 1024.98px) {
   .content-what__item {
@@ -869,19 +891,6 @@ body {
   .content-what__item {
     padding: 50px 26px;
   }
-}
-.content-what__item.active {
-  transform: translate(0px, 0px);
-  opacity: 1;
-}
-.content-what__item.active:nth-child(1) {
-  transition: all 0.3s ease 0s;
-}
-.content-what__item.active:nth-child(2) {
-  transition: all 0.3s ease 0.6s;
-}
-.content-what__item.active:nth-child(3) {
-  transition: all 0.3s ease 0.9s;
 }
 
 .content-what-item__icon-body {
@@ -957,6 +966,30 @@ body {
     flex-direction: column;
   }
 }
+.blog__items.active .blog__item {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.blog__items.active .blog__item:nth-child(1) {
+  transition: all 0.3s ease 0.3s;
+}
+.blog__items.active .blog__item:nth-child(2) {
+  transition: all 0.3s ease 0.6s;
+}
+.blog__items.active .blog__item:nth-child(3) {
+  transition: all 0.3s ease 0.9s;
+}
+@media (max-width: 1024.98px) {
+  .blog__items.active .blog__item:nth-child(1) {
+    transition: all 0.3s ease 0s;
+  }
+  .blog__items.active .blog__item:nth-child(2) {
+    transition: all 0.3s ease 0.4s;
+  }
+  .blog__items.active .blog__item:nth-child(3) {
+    transition: all 0.3s ease 0.8s;
+  }
+}
 .blog__item {
   display: flex;
   flex-direction: column;
@@ -966,6 +999,18 @@ body {
 .blog__item:hover img {
   scale: 1.05;
   transition: 0.8;
+}
+.blog__item:nth-child(1) {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+.blog__item:nth-child(2) {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+.blog__item:nth-child(3) {
+  transform: translateX(-200%);
+  opacity: 0;
 }
 
 .item-blog__img {
