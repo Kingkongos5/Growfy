@@ -616,7 +616,7 @@ body {
 
 .icon-body__item:hover .icon-body__text {
   color: #fff;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
   transition: all 0.3s ease-in 0.3s;
 }
 
