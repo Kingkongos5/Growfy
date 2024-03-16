@@ -721,6 +721,9 @@ body {
   position: relative;
   transform: translateX(-50%);
   opacity: 0;
+  @media(max-width: 334.98px){
+    font-size: 14px;
+  }
 }
 .why__point::before {
   content: "";
